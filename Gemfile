@@ -46,6 +46,9 @@ gem 'sidekiq', '~> 4.0'
 gem 'sinatra', require: false
 gem 'slim'
 # gem 'sidetiq', '~> 0.7.0'
+gem 'slim-rails'
+gem 'html2slim'
+
 
 gem 'nokogiri', '~> 1.6'
 
