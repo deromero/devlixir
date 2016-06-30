@@ -1,0 +1,26 @@
+.row
+  .col-md-10.col-md-offset-1
+    .side-padding-5
+      header.hero.flex-container.flex-space-btw
+        h1.hero-title Tus Artículos
+        .button-set
+          = link_to "Write a story", new_post_path, class: "button green-border-button"
+      nav.nav-tabs
+        ul
+          li= nav_link_to "Drafts", stories_drafts_path
+          li= nav_link_to "Public", stories_published_path
+      div data-animation="fadeInUp-fadeOutDown"
+        - if @posts.any?
+          - @posts.each do |post|
+            .story-card id="story_#{post.id}"
+              strong.sc-title= link_to post.title, edit_post_path(post)
+              small.sc-metadata
+                | Publicado #{time_ago_in_words(post.published_at)} ago  #{post_length_in_minutes(post.body)}
+                .btn-group
+                  button.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+                    span.glyphicon.glyphicon-chevron-down
+                  ul.dropdown-menu
+                    li= link_to "Edit", edit_post_path(post)
+                    li= link_to "Delete", api_post_path(post), method: :delete, remote: true
+        - else
+          p.no-sc-message No hay artículos publicados aún

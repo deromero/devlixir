@@ -1,0 +1,7 @@
+.user-card
+  .avatar-wrapper
+    = avatar_for user, size: 50
+  .uc-metadata
+    h4= link_to user.username, user
+    p= user.description
+    = follow_button_for(user)

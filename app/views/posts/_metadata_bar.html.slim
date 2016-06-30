@@ -1,0 +1,15 @@
+.post-metadata-bar data-page="post-metadata-bar"
+  .flex-container data-behavior="animated-metadata"
+    .post-stats.flex-container
+      = render partial: 'posts/likes', locals: { post: post }
+      div
+        = link_to post_path(post, anchor: 'responses'), class: "response-icon-wrapper" do
+          i.fa.fa-comment-o
+          span.response-count data-behavior="response-count" = post.responses.size
+      .bookmark-button
+        = render partial: 'posts/bookmarks', locals: { post: post }
+    .metabar-author-info.flex-container.flex-space-btw
+      div
+        = avatar_for post.user, size: 35
+        = react_component("PopoverLink", { user_id: post.user.id, url: user_path(post.user), children: post.username })
+      = follow_button_for post.user

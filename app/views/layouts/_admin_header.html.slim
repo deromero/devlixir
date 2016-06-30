@@ -1,0 +1,13 @@
+nav.navbar.navbar-inverse.navbar-fixed-top.navbar-admin
+  .container-fluid.col-md-10.col-md-offset-1
+    .navbar-header
+      = image_tag('stories-logo.svg', height: 40, alt: "Stories")
+    ul.nav.navbar-nav.filter-links
+      li
+        = nav_link_to "Dashboard", admin_dashboard_path
+      li
+        a href="/sidekiq"  Sidekiq
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        - if admin_signed_in?
+          li= link_to "Sign out", destroy_admin_session_path, method: :delete

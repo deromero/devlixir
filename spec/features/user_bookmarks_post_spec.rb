@@ -21,6 +21,6 @@ RSpec.feature "Bookmarking a post" do
     within("#main-post") do
       click_on "Bookmark"
     end
-    expect(page).to have_content("Sign in with Facebook")
+    expect(page).to have_content("Ingresar con Facebook")
   end
 end

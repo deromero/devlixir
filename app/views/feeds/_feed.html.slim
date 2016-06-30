@@ -1,0 +1,15 @@
+- feed.posts.each do |post|
+  .feed-panel
+    - if feed.tagged?(post)
+      .feed-metadata
+        = icon('tag')
+        = link_to feed.tag_for(post).name, feed.tag_for(post)
+    - elsif feed.recommended?(post)
+      .feed-metadata
+        | Recomendado ppor #{link_to feed.recommender_for(post).username, feed.recommender_for(post)}
+        - if (post.likes_count > 2)
+          | ay #{pluralize(post.likes.count - 1, 'other')}
+    - elsif feed.featured?(post)
+      .feed-metadata
+        | Destacado por el Equipo Devlixir y recomendado por #{pluralize(post.likes_count, 'other')}
+    = render partial: 'posts/post', locals: { post: post }

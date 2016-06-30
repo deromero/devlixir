@@ -26,7 +26,7 @@ RSpec.feature "Liking a post" do
     within("#main-post") do
       click_on "Like"
     end
-    expect(page).to have_content("Sign in with Facebook")
+    expect(page).to have_content("Ingresar con Facebook")
   end
 
 end

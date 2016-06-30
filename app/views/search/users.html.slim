@@ -1,0 +1,24 @@
+.col-md-10.col-md-offset-1
+  .row
+    .col-md-12.large-searchbar
+      = form_for :search, url: search_users_path, method: :get do |f|
+        = f.search_field :q, value: params[:q], placeholder: 'Search Stories', autofocus: true, autocomplete: 'off', onfocus: "this.value = this.value;"
+  .row
+    .col-md-2
+      .search-filter-links
+        .filter-link= link_to 'All', search_path(q: params[:q])
+        .active.filter-link
+          = link_to search_users_path(q: params[:q]) do
+            | Personas
+            span.glyphicon.glyphicon-chevron-right.pull-right
+    .col-md-7 data-animation="fadeInUp-fadeOutDown"
+      div
+        - @users.each do |user|
+          .user-panel
+            .avatar-wrapper
+              = avatar_for user, size: 60
+            .user-metadata
+              h4= link_to user.username, user
+              p= user.description
+            .follow-button-wrapper
+              = follow_button_for(user)

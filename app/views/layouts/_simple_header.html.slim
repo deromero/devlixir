@@ -1,0 +1,15 @@
+nav.navbar.navbar-default
+  .container-fluid.col-md-10.col-md-offset-1
+    .navbar-header
+      = link_to root_path, class: "navbar-brand", id: "logo" do
+        = image_tag('stories-logo.svg', height: 40, alt: "Stories")
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          li.new-post-button= link_to "Write a story", new_post_path, class: "button"
+          li#notifications
+            = react_component('NotificationsContainer', {})
+          = render 'layouts/avatar_dropdown'
+        - else
+          li.new-post-button= link_to "Write a story", new_post_path, class: "button", data:   behavior: 'trigger-overlay'
+          li.sign-in-button= link_to "Sign in / Sign up", new_user_session_path, class: 'button green-border-button', data:   behavior: 'trigger-overlay'

@@ -1,0 +1,36 @@
+.col-md-6.col-md-offset-1.dashboard-main-content
+  - unless @dashboard.top_stories?
+    - if user_signed_in? && current_page?('/')
+      div data-animation="fadeInUp-fadeOutDown"
+        = render 'shared/inline_editor'
+    .posts-wrapper data-animation="fadeInUp-fadeOutDown" data-behavior="endless-scroll"
+      = render @dashboard.posts
+  - else
+    .posts-wrapper data-animation="fadeInUp-fadeOutDown"
+      = render 'posts/top_stories', posts: @dashboard.posts
+  - unless @dashboard.top_stories?
+    .center
+      = will_paginate @dashboard.posts
+- content_for :sidebar do
+  aside.col-md-4.main-sidebar
+    h4.small-heading.border-top Etiquetas Destacadas
+    = react_component('TagList', { tags: @dashboard.featured_tags })
+    - if user_signed_in?
+      .flex-container.border-top
+        h4.small-heading Etiquetas que sigues
+        = react_component('AddTagButton')
+      = react_component('FollowingTagList', { followingTags: current_user.following_tags })
+      = react_component('FollowSuggestionsContainer')
+    - unless @dashboard.filtered?
+      h4.small-heading.border-top Artículos Destacados
+      .sidebar-top-stories
+        ul
+          - @dashboard.top_stories.each_with_index do |post, index|
+            li.top-stories-list-item
+              .count-button-wrapper
+                span.count-button= index + 1
+              .top-stories-links
+                = link_to post.title, post, class: 'post-title'
+                br/
+                small
+                  = react_component("PopoverLink", { user_id: post.user.id, url: user_path(post.user), children: post.username })

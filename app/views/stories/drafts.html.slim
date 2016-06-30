@@ -1,0 +1,29 @@
+.row
+  .col-md-10.col-md-offset-1
+    .side-padding-5
+      header.hero.flex-container.flex-space-btw
+        h1.hero-title Your Stories
+        .button-set
+          = link_to "Write a story", new_post_path, class: "button green-border-button"
+      nav.nav-tabs
+        ul
+          li= nav_link_to "Drafts", stories_drafts_path
+          li= nav_link_to "Public", stories_published_path
+      div data-animation="fadeInUp-fadeOutDown"
+        - if @drafts.any?
+          - @drafts.each do |draft|
+            .story-card id="story_#{draft.id}"
+              strong.sc-title= link_to (draft.title || "Untitled"), edit_post_path(draft)
+              small.sc-metadata
+                | Last edited #{time_ago_in_words(draft.updated_at)} ago 
+                - if draft.body.present?
+                  = post_length_in_minutes(draft.body)
+                  | (#{pluralize(draft.word_count, 'word')}) so far 
+                .btn-group
+                  button.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" type="button"
+                    span.glyphicon.glyphicon-chevron-down
+                  ul.dropdown-menu
+                    li= link_to "Edit", edit_post_path(draft)
+                    li= link_to "Delete", api_post_path(draft), method: :delete, remote: true
+        - else
+          p.no-sc-message No drafts yet

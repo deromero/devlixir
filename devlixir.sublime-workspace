@@ -188,10 +188,10 @@
 	"buffers":
 	[
 		{
-			"file": "config/initializers/carrierwave.rb",
+			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 377,
+				"buffer_size": 2446,
 				"line_ending": "Unix"
 			}
 		}
@@ -204,9 +204,29 @@
 	"command_palette":
 	{
 		"height": 384.0,
-		"last_filter": "rails",
+		"last_filter": "slim",
 		"selected_items":
 		[
+			[
+				"slim",
+				"Set Syntax: Ruby Slim"
+			],
+			[
+				"re",
+				"File: Rename"
+			],
+			[
+				"rena",
+				"File: Rename"
+			],
+			[
+				"htm",
+				"HTML2Slim: Convert selection"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
 			[
 				"rails",
 				"Set Syntax: Ruby on Rails"
@@ -222,10 +242,6 @@
 			[
 				"gitsta",
 				"Git: Status"
-			],
-			[
-				"slim",
-				"Set Syntax: Ruby Slim"
 			],
 			[
 				"in ",
@@ -306,11 +322,46 @@
 	"expanded_folders":
 	[
 		"/home/javier/apps/devlixir",
-		"/home/javier/apps/devlixir/config",
-		"/home/javier/apps/devlixir/config/initializers"
+		"/home/javier/apps/devlixir/app",
+		"/home/javier/apps/devlixir/app/views",
+		"/home/javier/apps/devlixir/app/views/admin",
+		"/home/javier/apps/devlixir/app/views/admin/dashboards",
+		"/home/javier/apps/devlixir/app/views/admin/posts"
 	],
 	"file_history":
 	[
+		"/home/javier/apps/devlixir/app/views/feeds/_feed.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/simple.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/editor.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/_alert_messages.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/_avatar_dropdown.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/_editor_header.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/_header.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/_overlay.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/_simple_header.html.slim",
+		"/home/javier/apps/devlixir/app/assets/javascripts/components/search_bar.es6.jsx",
+		"/home/javier/apps/devlixir/app/views/recommended_posts/index.html.slim",
+		"/home/javier/apps/devlixir/app/views/recommended_posts/index.js.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/application.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/_admin_header.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/_metadata_bar.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/_post_list_item.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/_top_stories.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/show.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/_post.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/bookmarks/destroy.js.slim",
+		"/home/javier/apps/devlixir/app/views/posts/bookmarks/create.js.slim",
+		"/home/javier/apps/devlixir/app/views/posts/_post_metadata.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/_social_share.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/likes/destroy.js.slim",
+		"/home/javier/apps/devlixir/app/views/posts/likes/create.js.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/_header.html.erb",
+		"/home/javier/apps/devlixir/app/views/posts/_likes.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/_bookmarks.html.slim",
+		"/home/javier/apps/devlixir/app/views/posts/_form.html.slim",
+		"/home/javier/apps/devlixir/Gemfile",
+		"/home/javier/apps/devlixir/app/views/admin/dashboards/show.html.slim",
+		"/home/javier/apps/devlixir/app/views/layouts/application.html.erb",
 		"/home/javier/apps/devlixir/config/database.yml",
 		"/home/javier/apps/amelia-blog/app/views/users/show.html.slim",
 		"/home/javier/apps/amelia-blog/spec/features/follow_unfollow_users.rb",
@@ -406,39 +457,7 @@
 		"/home/javier/apps/ecuadorsolidario/spec/features/user_index_spec.rb",
 		"/home/javier/apps/ecuadorsolidario/app/models/project.rb",
 		"/home/javier/apps/ecuadorsolidario/app/views/projects/_new_form.html.slim",
-		"/home/javier/apps/ecuadorsolidario/spec/features/new_project_spec.rb",
-		"/home/javier/apps/ecuadorsolidario/spec/features/sign_in_spec.rb",
-		"/home/javier/apps/ecuadorsolidario/db/migrate/20160620152625_fix_project_colum_names.rb",
-		"/home/javier/apps/ecuadorsolidario/test/models/project_test.rb",
-		"/home/javier/apps/ecuadorsolidario/app/views/categories/show.html.haml",
-		"/home/javier/apps/ecuadorsolidario/app/views/layouts/devise.html.slim",
-		"/home/javier/apps/ecuadorsolidario/app/views/shared/_footprint.html.slim",
-		"/home/javier/apps/ecuadorsolidario/app/assets/javascripts/templates/categories/index.hbs",
-		"/home/javier/apps/ecuadorsolidario/app/assets/javascripts/templates/categories/index.slimbars",
-		"/home/javier/apps/ecuadorsolidario/app/assets/javascripts/templates/categories/index.hamlbars",
-		"/home/javier/apps/ecuadorsolidario/app/views/shared/_navbar.html.haml",
-		"/home/javier/apps/ecuadorsolidario/config/application.rb",
-		"/home/javier/apps/ecuadorsolidario/Gemfile",
-		"/home/javier/apps/ecuadorsolidario/app/views/layouts/application.html.slim",
-		"/home/javier/apps/ecuadorsolidario/app/views/layouts/devise.html.haml",
-		"/home/javier/apps/ecuadorsolidario/app/views/layouts/explore.html.haml",
-		"/home/javier/apps/ecuadorsolidario/app/views/layouts/home.html.haml",
-		"/home/javier/apps/ecuadorsolidario/app/views/layouts/start.html.haml",
-		"/home/javier/apps/ecuadorsolidario/app/controllers/home_controller.rb",
-		"/home/javier/apps/ecuadorsolidario/app/assets/javascripts/home.js",
-		"/home/javier/apps/ecuadorsolidario/app/views/projects/_start.html.haml",
-		"/home/javier/apps/ecuadorsolidario/app/assets/javascripts/templates/categories.hbs",
-		"/home/javier/apps/ecuadorsolidario/app/controllers/application_controller.rb",
-		"/home/javier/.config/sublime-text-3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
-		"/home/javier/.config/sublime-text-3/Packages/SublimeCodeIntel/Default (Linux).sublime-keymap",
-		"/home/javier/.config/sublime-text-3/Packages/SideBarEnhancements/Default (Linux).sublime-keymap",
-		"/home/javier/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/javier/apps/ecuadorsolidario/config/initializers/jsroutes.rb",
-		"/home/javier/apps/ecuadorsolidario/app/views/shared/_footprint.html.haml",
-		"/home/javier/.config/sublime-text-3/Packages/AdvancedNewFile/Default (Linux).sublime-keymap",
-		"/home/javier/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/javier/apps/ecuadorsolidario/app/views/layouts/application.html.haml",
-		"/home/javier/apps/ecuadorsolidario/app/views/shared/global_footprint.html.haml"
+		"/home/javier/apps/ecuadorsolidario/spec/features/new_project_spec.rb"
 	],
 	"find":
 	{
@@ -488,19 +507,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "config/initializers/carrierwave.rb",
-					"semi_transient": true,
+					"file": "config/routes.rb",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 377,
+						"buffer_size": 2446,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								494,
+								494
 							]
 						],
 						"settings":
@@ -510,53 +529,36 @@
 							{
 								"close":
 								{
+									"1":
+									[
+										493,
+										494
+									]
 								},
 								"open":
+								{
+									"1":
+									[
+										487,
+										488
+									]
+								},
+								"unmatched":
 								{
 								}
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -567,13 +569,45 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content"
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
 							],
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -634,6 +668,26 @@
 		"selected_items":
 		[
 			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"_meta",
+				"app/views/posts/_metadata_bar.html.slim"
+			],
+			[
+				"_post_li",
+				"app/views/posts/_post_list_item.html.erb"
+			],
+			[
+				"_post",
+				"app/views/posts/_post.html.erb"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
 				"data",
 				"config/database.yml"
 			],
@@ -644,10 +698,6 @@
 			[
 				"foll",
 				"spec/features/follow_unfollow_users.rb"
-			],
-			[
-				"routes",
-				"config/routes.rb"
 			],
 			[
 				"show",
@@ -784,10 +834,6 @@
 			[
 				"registra",
 				"app/views/devise/registrations/new.html.slim"
-			],
-			[
-				"ge",
-				"Gemfile"
 			],
 			[
 				"use",
@@ -1026,7 +1072,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 345.0,
+	"side_bar_width": 374.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

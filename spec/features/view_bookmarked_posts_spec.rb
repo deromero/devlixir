@@ -12,7 +12,7 @@ RSpec.feature "Viewing bookmarked posts" do
   scenario "Signed in user can view his/hew bookmarked post in bookmark page" do
     sign_in user
     visit root_path
-    click_on "Bookmarks"
+    click_on "Favoritos"
 
     expect(page).to have_link "Interesting post"
     expect(page).not_to have_link "Not so interesting post"
@@ -20,7 +20,9 @@ RSpec.feature "Viewing bookmarked posts" do
 
   scenario "non-logged in user cannot go to bookmarked post page", js: true do
     visit root_path
-    click_on "Bookmarks"
-    expect(page).to have_content("Sign in with Facebook")
+    find("a", text: "Favoritos").trigger("click")
+
+    expect(page).to have_content("Ingresar con Facebook")
   end
+
 end

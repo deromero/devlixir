@@ -1,0 +1,59 @@
+.banner-container data-animation="fadeInUp-fadeOutDown-slow"
+  .hero-wrapper
+    header.hero
+      .profile-info
+        h1.hero-title= @user.username
+        p.hero-description= @user.description
+        - if @user.location.present?
+          .hero-location
+            = icon('map-marker')
+            = @user.location
+      .hero-avatar
+        = avatar_for @user, size: 100
+    div
+      - if user_signed_in?
+        = react_component('UserFollowContainer',       \
+          { followerCount: @followers_count,           \
+            followingCount: @following_count,          \
+            following: current_user.following?(@user), \
+            followed_id: @user.id,                     \
+            hideButton: current_user?(@user),          \
+            username: @user.username,                  \
+            overlayTrigger: true },                    \
+          )
+      - else
+        = react_component('UserFollowContainer',  \
+          { followerCount: @user.followers.size,  \
+            followingCount: @user.following.size, \
+            following: false,                     \
+            followed_id: @user.id,                \
+            hideButton: false,                    \
+            username: @user.username,             \
+            overlayTrigger: true },               \
+          )
+      - if user_signed_in? && current_user?(@user)
+        = link_to "Edit", edit_user_path(@user), class: 'button green-border-button pull-right edit-button'
+.posts-wrapper data-animation="fadeInUp-fadeOutDown"
+  .flex-container.border-top
+    h4.small-heading Interests
+    - if user_signed_in? && current_user?(@user)
+      = react_component('AddTagButton')
+  - if user_signed_in? && current_user?(@user)
+    = react_component('FollowingTagList', { followingTags: current_user.following_tags })
+  - else
+    = react_component('TagList', { tags: @user.following_tags }, { prerender: true })
+  - if @latest_posts.any?
+    h4.small-heading.border-top latest
+    = render @latest_posts
+- if @recommended_posts.any?
+  .banner-container data-animation="fadeInUp-fadeOutDown"
+    .posts-wrapper
+      h4.heading-border-b
+        | Recommended by #{@user.username} 
+        | \#{link_to "See all", user_recommended_posts_path(@user)}
+      .flex-container.f-wrap
+        - @recommended_posts.each do |post|
+          .recommended-post-card
+            = link_to post.title, post, class: "rpc-title"
+            br/
+            small.rpc-username= post.username

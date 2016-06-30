@@ -30,7 +30,7 @@ gem 'friendly_id', '~> 5.1'
 # Image upload
 gem 'carrierwave', '0.10.0'
 gem 'mini_magick', '3.8.0'
-gem 'fog',  '1.23.0'
+gem 'fog', '~> 1.38'
 gem 'net-ssh'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -38,8 +38,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'will_paginate', '~> 3.1'
 
 # Elasticsearch
-gem 'elasticsearch-model', '~> 0.1.8'
-gem 'elasticsearch-rails', '~> 0.1.8'
+gem 'elasticsearch-model', '~> 0.1.9'
+gem 'elasticsearch-rails', '~> 0.1.9'
 
 # Background Job
 gem 'sidekiq', '~> 4.0'
@@ -73,12 +73,14 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'guard-rspec', require: false
-  gem 'spring-commands-rspec', '~> 1.0'
+  gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
   gem 'rack-mini-profiler', '~> 0.9.8', require: false
   gem 'annotate'
   gem 'bullet', '~> 5.0'
   gem 'quiet_assets', '~> 1.1'
   gem 'pry-rails', '~> 0.3.4'
+  gem "binding_of_caller"
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
 end
 
 group :test do

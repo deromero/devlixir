@@ -1,0 +1,23 @@
+.banner-container data-animation="fadeInUp-fadeOutDown-slow"
+    .hero-wrapper
+      header.hero
+        .profile-info
+          h1.hero-title= @user.username
+          p.hero-description= @user.description
+        .hero-avatar
+          = avatar_for @user, size: 100
+      .following-metadata
+        span.following-count
+          b= @user.following.size
+          | Following
+        span.follower-count
+          = highlight(pluralize(@user.followers.size, "Follower"), /\d+/, highlighter: '<b>\1</b>')
+      - if user_signed_in? && current_user?(@user)
+        = link_to "Edit", edit_user_path(@user), class: 'button green-border-button'
+      = follow_button_for(@user)
+  .posts-wrapper data-animation="fadeInUp-fadeOutDown"
+    h4.heading-border-b
+      | Recommended by #{@user.username}
+    div data-behavior="endless-scroll"
+      = render @recommended_posts
+    = will_paginate @recommended_posts

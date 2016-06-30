@@ -1,0 +1,20 @@
+.overlay.overlay-hugeinc data-behavior="overlay"
+  button.overlay-close data-behavior="close-overlay" type="button"
+    span.glyphicon.glyphicon-remove
+  nav
+    h2.grayed-heading.center Sign in or create an account
+    ul.omniauth-button-group
+      li.omniauth-button
+        = link_to user_omniauth_authorize_path(:facebook), class: 'button facebook' do
+          = icon('facebook-official')
+          | Ingresar con Facebook
+      li.omniauth-button.google
+        = link_to user_omniauth_authorize_path(:google_oauth2), class: 'button google' do
+          = icon('google')
+          | Ingresar con Google
+      li.omniauth-button.twitter
+        = link_to user_omniauth_authorize_path(:twitter), class: 'button twitter' do
+          = icon('twitter')
+          | Ingresar con Twitter
+      li
+        = link_to "Ingresar con o Registrarse con email", new_user_session_path, class: "signin-signup-link"

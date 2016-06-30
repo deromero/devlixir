@@ -1,0 +1,25 @@
+doctype html
+html ng-app="Stories"
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title Devlixir
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = favicon_link_tag 'favicon.png', type: 'image/png'
+    = favicon_link_tag 'stories-icon-apple-touch-180x180.png', rel: 'apple-touch-icon', type: 'image/png'
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+  body class=("#{controller.controller_name} #{controller.action_name}")
+    = render 'layouts/overlay' unless user_signed_in?
+    = react_component('UserOverlay', {})
+    .progress-bar data-behavior="progress-bar"
+    - if admin_signed_in?
+      = render 'layouts/admin_header'
+    - else
+      = render 'layouts/header'
+    = render 'layouts/alert_messages'
+    .container-fluid.main-container
+      = yield
+      = yield :sidebar
+  javascript:
+    window.userSignedIn = #{user_signed_in?};

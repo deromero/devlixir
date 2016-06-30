@@ -1,0 +1,15 @@
+.like-button-wrapper
+  - if user_signed_in?
+    = react_component('LikeButton',                      \
+      { liked: current_user.liked?(response),            \
+      likeCount: response.likes.size,                    \
+      likeEndpoint: api_response_likes_path(response),   \
+      unlikeEndpoint: api_response_likes_path(response), \
+      likeableType: 'Response',                          \
+      likeableId: response.id,                           \
+      disableOverlay: true })
+  - else
+    = button_to '', method: :get, class: 'like-button', data: { behavior: 'trigger-overlay' } do
+      i.fa.fa-heart-o
+      span.hide-text Like
+    span.like-count= response.likes.size

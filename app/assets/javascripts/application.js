@@ -1,5 +1,5 @@
 // This is a manifest file that'll be compiled into application.js
-// 
+//
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
 // or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
 //
@@ -29,6 +29,7 @@
 //= require jquery.autoSave
 //= require pubsub
 //= require bootstrap-sprockets
+//= require es5-shim.js
 //= require react
 //= require react_ujs
 //= require components

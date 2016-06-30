@@ -27,6 +27,6 @@ RSpec.feature "Bookmarking a response" do
       click_on "Bookmark"
     end
 
-    expect(page).to have_content("Sign in with Facebook")
+    expect(page).to have_content("Ingresar con Facebook")
   end
 end
