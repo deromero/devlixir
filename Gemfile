@@ -55,7 +55,7 @@ gem 'nokogiri', '~> 1.6'
 
 # Caching
 gem 'dalli', '~> 2.7'
-
+gem 'figaro'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

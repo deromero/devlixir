@@ -3,10 +3,10 @@ require 'carrierwave/orm/activerecord'
 if Rails.env.production?
   CarrierWave.configure do |config|
     #azure configuration
-    config.azure_storage_account_name = 'devlixirstore'
-    config.azure_storage_access_key = 'ZQ83EjeGB+CKPjNRGuPGSUg3/Lxo9vEQ1wE45lbQDsDKT7P8hi/0hqkxq9+pg5KNjPd+kdg7zl2h56sOQoWNYw=='
-    config.azure_storage_blob_host = 'https://devlixirstore.blob.core.windows.net/' # optional
-    config.azure_container = 'devlixircont'
+    config.azure_storage_account_name = ENV['AZURE_STORAGE_ACCOUNT'] #''
+    config.azure_storage_access_key = ENV['AZURE_STORAGE_ACCESS_KEY'] #''
+    config.azure_storage_blob_host = ENV['AZURE_STORAGE_BLOB_ACCOUNT'] #'' # optional
+    config.azure_container = ENV['AZURE_CONTAINER'] #''
     #config.asset_host = 'YOUR CDN HOST' # optional
 
     # config.fog_credentials = {
