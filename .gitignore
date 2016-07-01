@@ -51,11 +51,11 @@ pickle-email-*.html
 **.orig
 
 # Configuration files
-config/app_config.yml
-config/database.yml
-config/application.yml
-config/mandrill.yml
-config/paperclip.yml
+#config/app_config.yml
+#config/database.yml
+#config/application.yml
+#config/mandrill.yml
+#config/paperclip.yml
 
 # System Recordings from Tropo
 public/tropo_recordings/**/*
@@ -119,7 +119,6 @@ build/
 .rvmrc
 
 .DS_store
-config/database.yml
 
 # Windows image file caches
 Thumbs.db
