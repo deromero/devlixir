@@ -8,7 +8,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
-    storage :fog
+    storage :azure
   else
     storage :file
   end
@@ -29,7 +29,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
- 
+
   process resize_to_limit: [200, 200]
   #
   # def scale(width, height)

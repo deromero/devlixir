@@ -29,6 +29,7 @@ gem 'friendly_id', '~> 5.1'
 
 # Image upload
 gem 'carrierwave', '0.10.0'
+gem 'carrierwave-azure'
 gem 'mini_magick', '3.8.0'
 gem 'fog', '~> 1.38'
 gem 'net-ssh'
