@@ -45,6 +45,7 @@ GEM
     autoprefixer-rails (6.3.4)
       execjs
     awesome_print (1.6.1)
+    azure (0.0.0)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -79,6 +80,9 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    carrierwave-azure (0.0.3)
+      azure
+      carrierwave
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
     cliver (0.3.2)
@@ -544,6 +548,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.5.0)
   carrierwave (= 0.10.0)
+  carrierwave-azure
   dalli (~> 2.7)
   database_cleaner (~> 1.5.1)
   devise (~> 3.5.3)
